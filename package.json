@@ -4,7 +4,7 @@
   "description": "shopping cart app using mern stack",
   "main": "index.js",
   "scripts": {
-    "test": "]"
+    "start": "node backend/server"
   },
   "repository": {
     "type": "git",
