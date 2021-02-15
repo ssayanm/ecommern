@@ -1,0 +1,22 @@
+{
+  "name": "ecommern",
+  "version": "1.0.0",
+  "description": "shopping cart app using mern stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssayanm/ecommern.git"
+  },
+  "author": "Sayan Mukherjee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssayanm/ecommern/issues"
+  },
+  "homepage": "https://github.com/ssayanm/ecommern#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
