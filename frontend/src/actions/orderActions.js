@@ -11,7 +11,9 @@ import axios from "axios";
 
 export const createOrder = (order) => async (dispatch, getState) => {
   try {
-    dispatch({ type: ORDER_CREATE_REQUEST });
+    dispatch({
+      type: ORDER_CREATE_REQUEST,
+    });
 
     const {
       userLogin: { userInfo },
@@ -30,20 +32,26 @@ export const createOrder = (order) => async (dispatch, getState) => {
       type: ORDER_CREATE_SUCCESS,
       payload: data,
     });
+
+    localStorage.removeItem("cartItems");
   } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+
     dispatch({
       type: ORDER_CREATE_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
+      payload: message,
     });
   }
 };
 
 export const getOrderDetails = (id) => async (dispatch, getState) => {
   try {
-    dispatch({ type: ORDER_DETAILS_REQUEST });
+    dispatch({
+      type: ORDER_DETAILS_REQUEST,
+    });
 
     const {
       userLogin: { userInfo },
@@ -62,12 +70,14 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       payload: data,
     });
   } catch (error) {
+    const message =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message;
+
     dispatch({
       type: ORDER_DETAILS_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
+      payload: message,
     });
   }
 };
