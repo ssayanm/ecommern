@@ -1,3 +1,5 @@
+import axios from "axios";
+
 import {
   USER_LOGIN_REQUEST,
   USER_LOGIN_SUCCESS,
@@ -13,8 +15,6 @@ import {
   USER_UPDATE_PROFILE_SUCCESS,
   USER_UPDATE_PROFILE_FAIL,
 } from "../constants/userConstants";
-
-import axios from "axios";
 
 export const login = (email, password) => async (dispatch) => {
   try {
