@@ -4,8 +4,8 @@ import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
-import { login } from "../actions/userActions";
 import FormContainer from "../components/FormContainer";
+import { login } from "../actions/userActions";
 
 const LoginScreen = ({ location, history }) => {
   const [email, setEmail] = useState("");
@@ -28,6 +28,7 @@ const LoginScreen = ({ location, history }) => {
     e.preventDefault();
     dispatch(login(email, password));
   };
+
   return (
     <FormContainer>
       <h1>Sign In</h1>
@@ -61,7 +62,7 @@ const LoginScreen = ({ location, history }) => {
 
       <Row className="py-3">
         <Col>
-          New Customer?{" "}
+          New Customer?
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Regsiter
           </Link>
