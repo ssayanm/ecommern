@@ -64,7 +64,7 @@ const ShippingScreen = ({ history }) => {
           <Form.Label>Country</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter your postal code"
+            placeholder="Enter your country name"
             value={country}
             required
             onChange={(e) => setCountry(e.target.value)}
