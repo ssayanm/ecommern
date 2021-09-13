@@ -31,8 +31,8 @@ const OrderScreen = ({ match }) => {
               <h2>Shipping</h2>
               <p>
                 <strong>Address: </strong>
-                {order.shippingAddress.address}, {order.shippingAddress.city},
-                {order.shippingAddress.postalCode},{" "}
+                {order.shippingAddress.address},{order.shippingAddress.city},
+                {order.shippingAddress.postalCode},
                 {order.shippingAddress.country}
               </p>
             </ListGroup.Item>
