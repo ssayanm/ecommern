@@ -7,7 +7,7 @@ const Meta = ({ title, keywords, description, siteTitle }) => {
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
-      <link rel="icon" href="/ps.jpg" />
+      <link rel="icon" href="/romance.svg" />
       <title>{`${title} | ${siteTitle}`}</title>
     </Head>
   );
