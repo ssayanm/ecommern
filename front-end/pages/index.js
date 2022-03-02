@@ -30,6 +30,14 @@ export default function Home({ match }) {
         <div className="flex flex-wrap justify-center text-center">
           <h1>Latest Products</h1>
         </div>
+        <div>
+          {/*products.map((product) => (
+            <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+              <Product product={product} />
+            </Col>
+          ))*/}
+          {console.log(products)}
+        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@
   "proxy": "http://127.0.0.1:5000",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

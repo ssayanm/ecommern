@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Layout>
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        {/* Global Site Tag (gtag.js) - Google Analytics 
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
           });
         `}
         </Script>
-
+*/}
         <Component {...pageProps} />
       </Layout>
     </Provider>
