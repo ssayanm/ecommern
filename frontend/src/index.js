@@ -6,11 +6,14 @@ import "./bootstrap.min.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ProductProvider from "./context/products";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <ProductProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </ProductProvider>,
   document.getElementById("root")
 );
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -10,8 +10,13 @@ import Paginate from "../components/Paginate";
 import ProductCarousel from "../components/ProductCarousel";
 import { listProducts } from "../actions/productActions";
 
+import { ProductContext } from "../context/products";
+
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
+
+  const { myproducts } = useContext(ProductContext);
+  console.log(myproducts);
 
   const pageNumber = match.params.pageNumber || 1;
 
